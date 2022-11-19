@@ -4,37 +4,37 @@ import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.yakubjonov.domain.model.Food
+import com.yakubjonov.domain.model.Product
 import com.yakubjonov.nurserymanagement.databinding.ItemProductBinding
 
-class FoodAdapter(private val list: List<Food>, private val countChildren:Int) : RecyclerView.Adapter<FoodAdapter.FVH>() {
+class FoodAdapter(private val list: List<Product>, private val countChildren:Int) : RecyclerView.Adapter<FoodAdapter.FVH>() {
 
     inner class FVH(private val itemBinding: ItemProductBinding) :
         RecyclerView.ViewHolder(itemBinding.root) {
 
-        fun onBind(food: Food, position: Int) {
+        fun onBind(product: Product, position: Int) {
             itemBinding.apply {
                 if (position==0) {
                     root.setBackgroundColor(Color.BLACK)
-                    nameTv.text = food.name
-                    withChiqitTv.text = food.withChikiq
-                    withoutChiqitTv.text = food.withoutChikiq
-                         proteinTv.text = food.protein
-                         oilTv.text = food.oil
-                         carbohydrateTv.text = food.carbohydrate
-                         ccalTv.text = food.ccal
+                    nameTv.text = product.name
+                    withChiqitTv.text = product.withChikiq
+                    withoutChiqitTv.text = product.withoutChikiq
+                         proteinTv.text = product.protein
+                         oilTv.text = product.oil
+                         carbohydrateTv.text = product.carbohydrate
+                         ccalTv.text = product.ccal
                 } else {
-                    nameTv.text = food.name
-                    val chikitli = (food.withChikiq.toFloat() * countChildren).toString()
-                    val chikitsiz = (food.withoutChikiq.toFloat() * countChildren).toString()
+                    nameTv.text = product.name
+                    val chikitli = (product.withChikiq.toFloat() * countChildren).toString()
+                    val chikitsiz = (product.withoutChikiq.toFloat() * countChildren).toString()
                     withChiqitTv.text =
                         chikitli.substringBefore(".")
                     withoutChiqitTv.text =
                         chikitsiz.substringBefore(".")
-                     proteinTv.text = (food.protein.toFloat()*countChildren).toString()
-                     oilTv.text = (food.oil.toFloat()*countChildren).toString()
-                     carbohydrateTv.text = (food.carbohydrate.toFloat()*countChildren).toString()
-                     ccalTv.text = (food.ccal.toFloat()*countChildren).toString()
+                     proteinTv.text = (product.protein.toFloat()*countChildren).toString()
+                     oilTv.text = (product.oil.toFloat()*countChildren).toString()
+                     carbohydrateTv.text = (product.carbohydrate.toFloat()*countChildren).toString()
+                     ccalTv.text = (product.ccal.toFloat()*countChildren).toString()
                 }
             }
         }
@@ -55,7 +55,7 @@ class FoodAdapter(private val list: List<Food>, private val countChildren:Int) :
 
     override fun getItemCount(): Int = if (list.isEmpty()) 0 else list.size + 1
 
-    private fun getStarted() = Food(
+    private fun getStarted() = Product(
         name = "Maxsulot nomi",
         withChikiq = "Chiqitli (gr)",
         withoutChikiq = "Chiqitsiz (gr)",

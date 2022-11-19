@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.RecyclerView
-import com.yakubjonov.domain.model.Food
+import com.yakubjonov.domain.model.Product
 import com.yakubjonov.domain.model.Recipe
 import com.yakubjonov.nurserymanagement.databinding.ItemRecipeBinding
 
@@ -41,7 +41,7 @@ class RecipeAdapter(private var count:Int) : RecyclerView.Adapter<RecipeAdapter.
         return when (position) {
             0 -> Recipe(
                 "Manniy Bo'tqasi", listOf(
-                    Food(
+                    Product(
                         "Manniy yormasi",
                         "15",
                         "15",
@@ -50,8 +50,8 @@ class RecipeAdapter(private var count:Int) : RecyclerView.Adapter<RecipeAdapter.
                         "10.18",
                         "49.20"
                     ),
-                    Food("Sut", "150", "150", "4.2", "4.8", "7.05", "87"),
-                    Food(
+                    Product("Sut", "150", "150", "4.2", "4.8", "7.05", "87"),
+                    Product(
                         "Sariyog'",
                         "4.7",
                         "4.7",
@@ -60,14 +60,14 @@ class RecipeAdapter(private var count:Int) : RecyclerView.Adapter<RecipeAdapter.
                         "0.04",
                         "34.91"
                     ),
-                    Food("Shakar", "4.7", "4.7", "0", "0", "4.66", "17.69"),
-                    Food("Tuz", "0.8", "0.8", "0", "0", "0", "0")
+                    Product("Shakar", "4.7", "4.7", "0", "0", "4.66", "17.69"),
+                    Product("Tuz", "0.8", "0.8", "0", "0", "0", "0")
                 )
             )
             1 -> Recipe(
                 "Sutli kakao",
                 listOf(
-                    Food(
+                    Product(
                         "Kakao-kukuni",
                         "2",
                         "2",
@@ -76,15 +76,15 @@ class RecipeAdapter(private var count:Int) : RecyclerView.Adapter<RecipeAdapter.
                         "0.6",
                         "7.6"
                     ),
-                    Food("Sut", "84", "84", "2.35", "2.69", "3.9", "48.76"),
-                    Food("Shakar", "7", "7", "0", "0", "7", "26.53"),
+                    Product("Sut", "84", "84", "2.35", "2.69", "3.9", "48.76"),
+                    Product("Shakar", "7", "7", "0", "0", "7", "26.53"),
                 )
             )
             2 -> Recipe(
                 "Saryog'li buterbrod",
                 listOf(
-                    Food("Saryog'", "5", "5", "0.02", "4.12", "0", "37.4"),
-                    Food(
+                    Product("Saryog'", "5", "5", "0.02", "4.12", "0", "37.4"),
+                    Product(
                         "Bug'doy noni",
                         "40",
                         "40",

@@ -1,6 +1,6 @@
 package com.yakubjonov.domain.model
 
-data class Food(
+data class Product(
     val name:String,
     val withChikiq:String,
     val withoutChikiq:String,
