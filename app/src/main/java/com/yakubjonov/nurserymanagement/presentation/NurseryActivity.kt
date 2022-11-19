@@ -1,4 +1,4 @@
-package com.yakubjonov.nurserymanagement
+package com.yakubjonov.nurserymanagement.presentation
 
 import android.os.Bundle
 import android.view.Menu
@@ -11,6 +11,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
+import com.yakubjonov.nurserymanagement.R
 import com.yakubjonov.nurserymanagement.databinding.ActivityNurseryBinding
 
 class NurseryActivity : AppCompatActivity() {

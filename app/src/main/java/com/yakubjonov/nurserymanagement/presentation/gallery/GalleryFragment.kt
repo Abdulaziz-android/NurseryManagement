@@ -1,4 +1,4 @@
-package com.yakubjonov.nurserymanagement.ui.gallery
+package com.yakubjonov.nurserymanagement.presentation.gallery
 
 import android.os.Bundle
 import android.view.LayoutInflater

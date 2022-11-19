@@ -7,19 +7,28 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.yakubjonov.nurserymanagement.ui.home.HomeFragment"
+        android:name="com.yakubjonov.nurserymanagement.presentation.home.HomeFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_gallery"
-        android:name="com.yakubjonov.nurserymanagement.ui.gallery.GalleryFragment"
+        android:name="com.yakubjonov.nurserymanagement.presentation.gallery.GalleryFragment"
         android:label="@string/menu_gallery"
         tools:layout="@layout/fragment_gallery" />
 
     <fragment
         android:id="@+id/nav_slideshow"
-        android:name="com.yakubjonov.nurserymanagement.ui.slideshow.SlideshowFragment"
+        android:name="com.yakubjonov.nurserymanagement.presentation.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.yakubjonov.nurserymanagement.presentation.detail.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" />
 </navigation>

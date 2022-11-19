@@ -1,4 +1,4 @@
-package com.yakubjonov.nurserymanagement.ui.slideshow
+package com.yakubjonov.nurserymanagement.presentation.slideshow
 
 import android.os.Bundle
 import android.view.LayoutInflater
